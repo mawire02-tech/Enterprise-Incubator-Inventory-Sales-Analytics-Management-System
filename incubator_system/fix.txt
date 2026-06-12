@@ -1,0 +1,164 @@
+1. Sales
+- should not access reports page
+- remove: Gross Profit, Monthly Revenue, Stock Value,Net Profit,COGS on sales dashboard pages(should not be seen by sales team)
+2. Manager
+- should not make sales
+- should only view sales
+- should not view system users, audit logs, settings
+3. stock clerk 
+- should not view reports
+- on dashboard show Stock Alerts, products quantities only removes profits and revenue details
+
+
+help me updated these on my website "1. Sales - should not access reports page - remove: Gross Profit, Monthly Revenue, Stock Value,Net Profit,COGS on sales dashboard pages(should not be seen by sales team) 2. Manager - should not make sales - should only view sales - should not view system users, audit logs, settings 3. stock clerk  - should not view reports - on dashboard show Stock Alerts, products quantities only removes profits and revenue details" the web folder structure is as follows "
+
+
+
+```markdown
+
+incubator_system/
+
+├── app/
+
+│   ├── Controllers/          # Request handlers
+
+│   │   ├── AuthController.php
+
+│   │   ├── DashboardController.php
+
+│   │   ├── InventoryController.php
+
+│   │   ├── SalesController.php
+
+│   │   ├── CustomerController.php
+
+│   │   ├── UserController.php
+
+│   │   ├── ReportsController.php
+
+│   │   ├── MiscControllers.php   # Audit, Notifications, PnL, Calculator
+
+│   │   └── SettingsController.php
+
+│   ├── Core/
+
+│   │   ├── Controller.php     # Base controller
+
+│   │   ├── Database.php       # PDO singleton
+
+│   │   ├── Logger.php         # File logger
+
+│   │   ├── Model.php          # Base model
+
+│   │   └── Router.php         # URL dispatcher
+
+│   ├── Helpers/
+
+│   │   ├── Auth.php           # Authentication + RBAC/PBAC
+
+│   │   └── Helpers.php        # Session, CSRF, Validator
+
+│   ├── Middleware/
+
+│   │   ├── AuthMiddleware.php
+
+│   │   └── GuestMiddleware.php
+
+│   ├── Services/
+
+│   │   ├── AuditService.php
+
+│   │   ├── BackupService.php
+
+│   │   ├── ExportService.php
+
+│   │   ├── InventoryService.php
+
+│   │   ├── LedgerService.php     # Also contains ProfitLossService
+
+│   │   ├── NotificationService.php
+
+│   │   └── SalesService.php
+
+│   └── Views/
+
+│       ├── layouts/main.php      # Master layout
+
+│       ├── auth/                 # Login, profile, password
+
+│       ├── dashboard/
+
+│       ├── inventory/
+
+│       ├── sales/                # POS, invoice, returns
+
+│       ├── customers/
+
+│       ├── users/
+
+│       ├── reports/
+
+│       ├── audit/
+
+│       ├── notifications/
+
+│       ├── calculator/
+
+│       ├── settings/
+
+│       └── errors/
+
+├── config/
+
+│   └── config.php
+
+├── database/
+
+│   ├── migrations/
+
+│   │   └── 001_schema.sql        # Full 18-table schema
+
+│   └── seeds/
+
+│       └── 001_seed_data.sql     # Roles, permissions, demo data
+
+├── public/
+
+│   ├── index.php                 # Entry point
+
+│   ├── .htaccess
+
+│   ├── manifest.json             # PWA manifest
+
+│   ├── css/app.css
+
+│   └── js/app.js
+
+├── routes/
+
+│   └── web.php
+
+├── storage/
+
+│   ├── logs/
+
+│   ├── backups/
+
+│   ├── exports/
+
+│   └── uploads/
+
+└── setup.php
+
+```
+
+
+
+" tell the files you need according to the folder structure
+
+
+
+ngrok config add-authtoken 3EwkVT34pBLLoQ45e6NsIDoUQpX_3Hh1e7BdvwGxV1GCcQsQm
+
+
+https://meet.google.com/pzb-sndy-tdc
